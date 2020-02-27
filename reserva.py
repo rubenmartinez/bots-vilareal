@@ -13,7 +13,7 @@ import yaml
 
 with open("/home/rmartinez/NODROPBOX/bot-vilarealsport.yaml", 'r') as stream:
     try:
-        config = yaml.load(stream)
+        config = yaml.safe_load(stream)
     except yaml.YAMLError as exc:
         print(exc)
         exit()
